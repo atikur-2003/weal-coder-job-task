@@ -5,6 +5,7 @@ import AboutSection from './components/AboutSection';
 import FeaturedProperties from './components/FeaturedProperties';
 import WhyUsSection from './components/WhyUsSection';
 import AllProperties from './components/AllProperties';
+import Testimonials from './components/Testimonial';
 
 const App = () => {
     return (
@@ -15,6 +16,7 @@ const App = () => {
             <FeaturedProperties/>
             <WhyUsSection/>
             <AllProperties/>
+            <Testimonials/>
         </div>
     );
 };
