@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "image": "/images/property-5.png",
+    "category": "SALE",
+    "title": "Emerald Hills Estates",
+    "location": "2699 Green Valley, High Lake, CA",
+    "price": "$989,000"
+  },
+  {
+    "id": 2,
+    "image": "/images/property-10.png",
+    "category": "RENT",
+    "title": "Asati Garden City",
+    "location": "2699 Green Valley, High Lake, CA",    
+    "price": "$989,000"
+  },
+  {
+    "id": 3,
+    "image": "/images/property-6.png",
+    "category": "RENT",
+    "title": "Duplex de Villa",
+    "location": "2699 Green Valley, High Lake, CA",
+    "price": "$989,000"
+  },
+  {
+    "id": 4,
+    "image": "/images/property-7.png",
+    "category": "SALE",
+    "title": "Park Avenue Villas",
+    "location": "2699 Green Valley, High Lake, CA",
+    "price": "$989,000"
+  },
+  {
+    "id": 5,
+    "image": "/images/property-8.png",
+    "category": "RENT",
+    "title": "A White House",
+    "location": "2699 Green Valley, High Lake, CA",
+    "price": "$989,000"
+  },
+  {
+    "id": 6,
+    "image": "/images/property-9.png",
+    "category": "SALE",
+    "title": "Colorful Living Room",
+    "location": "2699 Green Valley, High Lake, CA",
+    "price": "$989,000"
+  }
+]

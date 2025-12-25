@@ -4,6 +4,7 @@ import HeaderBottomCards from './components/HeaderBottomCards';
 import AboutSection from './components/AboutSection';
 import FeaturedProperties from './components/FeaturedProperties';
 import WhyUsSection from './components/WhyUsSection';
+import AllProperties from './components/AllProperties';
 
 const App = () => {
     return (
@@ -13,6 +14,7 @@ const App = () => {
             <AboutSection/>
             <FeaturedProperties/>
             <WhyUsSection/>
+            <AllProperties/>
         </div>
     );
 };

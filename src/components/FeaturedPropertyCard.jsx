@@ -1,5 +1,4 @@
 import React from "react";
-import { HiLocationMarker } from "react-icons/hi";
 import locationIcon from "../../dist/images/location.png";
 
 const FeaturedPropertyCard = ({ property }) => {
