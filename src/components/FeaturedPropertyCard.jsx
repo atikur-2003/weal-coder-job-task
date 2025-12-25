@@ -38,7 +38,7 @@ const FeaturedPropertyCard = ({ property }) => {
         </div>
 
         {/* card bottom feature section */}
-        <div className="flex items-center gap-7 py-5">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-7 py-5">
           <div className="flex items-center gap-2">
             <img src="/images/bed-icon.png" alt="" />
             <p>5 Beds</p>
