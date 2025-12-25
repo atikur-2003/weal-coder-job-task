@@ -101,7 +101,7 @@ const Header = () => {
       />
 
       {/* Content Container */}
-      <div className="relative z-10 px-4 md:px-10 lg:px-20">
+      <div className="relative z-10 px-4 md:px-10 lg:px-24">
         {/* Navigation Bar */}
         <nav className="container py-6  text-white">
           <div className="flex items-center justify-between">

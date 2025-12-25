@@ -1,45 +1,11 @@
 import React from "react";
 import { BsArrowUpRight } from "react-icons/bs";
-// import aboutImg1 from "../../dist/images/about-img1.png";
-// import aboutImg2 from "../../dist/images/about-img2.png";
-
-// const AboutSection = () => {
-//   return (
-//     <div className="mt-40 px-4 md:px-10 lg:px-20">
-//       <div className="flex justify-between">
-//         <div>
-//         <div>
-//           <h1>About our profiEstate Company</h1>
-//         </div>
-//         <div className="relative">
-//           <img src={aboutImg1} alt="About section image1" className="lg:w-90"/>
-//           <img
-//             src={aboutImg2}
-//             alt="About section image2"
-//             className="absolute -bottom-2 -right-28 lg:w-50"
-//           />
-//         </div>
-//       </div>
-//       <div>
-//         <div>
-//             <h1>25</h1>
-//             <span>+</span>
-//             <p>years of real estate experience</p>
-//         </div>
-//       </div>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default AboutSection;
-
 import { FaStar, FaRegHandshake } from "react-icons/fa";
 import { HiOutlineBadgeCheck } from "react-icons/hi";
 
 const AboutSection = () => {
   return (
-    <section className="w-full bg-white py-16 lg:py-24 px-4 md:px-10 lg:px-20">
+    <section className="w-full bg-white py-16 mt-20 lg:py-24 px-4 md:px-10 lg:px-24">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           {/* LEFT SIDE */}
@@ -82,7 +48,7 @@ const AboutSection = () => {
               </div>
             </div>
 
-            <div className="-ml-10">
+            <div className="lg:-ml-10">
               {/* Description */}
               <p className="text-gray-600 mt-6 max-w-lg leading-relaxed">
                 Our agency takes a collaborative approach, working closely with

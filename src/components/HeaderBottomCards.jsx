@@ -5,7 +5,7 @@ import headerBottom3 from '../../dist/images/header-bottom3.png'
 
 const HeaderBottomCards = () => {
     return (
-        <div className='hidden lg:grid grid-cols-1 lg:grid-cols-3 gap-7 px-4 md:px-10 lg:px-20 absolute -bottom-40 w-full'>
+        <div className='hidden lg:grid grid-cols-1 lg:grid-cols-3 gap-7 px-4 md:px-10 lg:px-24 absolute -bottom-40 w-full'>
             <div className='bg-white shadow-md py-5 rounded-xl flex flex-col items-center'>
                 <div>
                     <img src={headerBottom1} alt="" />

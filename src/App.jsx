@@ -2,6 +2,7 @@ import React from 'react';
 import Header from './components/Header';
 import HeaderBottomCards from './components/HeaderBottomCards';
 import AboutSection from './components/AboutSection';
+import FeaturedProperties from './components/FeaturedProperties';
 
 const App = () => {
     return (
@@ -9,6 +10,7 @@ const App = () => {
             <Header />
             <HeaderBottomCards/>
             <AboutSection/>
+            <FeaturedProperties/>
         </div>
     );
 };

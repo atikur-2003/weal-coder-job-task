@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "image": "/images/property-1.png",
+    "category":"SALE",
+    "title": "Park Avenue Villas",
+    "location": "2699 Green Valley, High Lake, CA",
+    "description": "Spacious modern home with premium finishes, large living areas, and a beautiful outdoor space.",
+    "price": "$989,000"
+  },
+  {
+    "id": 2,
+    "image": "/images/property-2.png",
+    "category":"RENT",
+    "title": "Charming Apartment",
+    "location": "2699 Green Valley, High Lake, CA",
+    "description": "Elegant villa featuring contemporary architecture, private pool, and ocean-inspired interiors.",
+    "price": "$1,850,000"
+  },
+  {
+    "id": 3,
+    "image": "/images/property-3.png",
+    "category":"SALE",
+    "title": "Modern Architecture",
+    "location": "2699 Green Valley, High Lake, CA",
+    "description": "Stylish apartment located in the heart of the city with stunning skyline views and smart design.",
+    "price": "$980,000"
+  },
+  {
+    "id": 4,
+    "image": "/images/property-4.png",
+    "category":"RENT",
+    "title": "Modern Style House",
+    "location": "2699 Green Valley, High Lake, CA",
+    "description": "Comfortable suburban home offering a peaceful environment, modern amenities, and family-friendly layout.",
+    "price": "$620,000"
+  }
+]
