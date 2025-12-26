@@ -60,7 +60,7 @@ const Footer = () => {
           </div>
 
           {/* Divider */}
-          <div className="border-t border-white/10 mt-32">
+          <div className="border-t border-white/10 mt-10 lg:mt-32">
             <p className="text-xs text-gray-500 py-6">
               © 2024 Your Real Estate Company. All Rights Reserved.
             </p>
@@ -68,8 +68,8 @@ const Footer = () => {
         </div>
 
         {/* RIGHT SIDE – CONTACT FORM */}
-        <div className="bg-[#011829] px-5 pt-20 pb-5">
-          <h4 className="text-white font-medium mb-6">Quick Contact Us</h4>
+        <div className="bg-[#011829] px-5 pt-16 pb-5">
+          <h4 className="text-white text-2xl font-medium mb-6">Quick Contact Us</h4>
 
           <form className="space-y-7">
             <div className=" space-x-5">

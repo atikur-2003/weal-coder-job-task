@@ -1,13 +1,50 @@
-import React from "react";
+import React, { useRef } from "react";
 import  blogs from "../data/blogData.json";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 
 const BlogSection = () => {
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  const sectionRef = useRef();
+  const headingRef = useRef();
+  const sectionLeftRef = useRef();
+  const sectionRightRef = useRef();
+  
+
+  useGSAP(() => {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: sectionRef.current,
+        start: "top 90%",
+      },
+    });
+
+    tl.from(headingRef.current, {
+      opacity: 0,
+      y: 50,
+      duration: 0.8,
+    })
+    .from(sectionLeftRef.current, {
+      opacity: 0,
+      x: -50,
+      duration: 0.8,
+    })
+    .from(sectionRightRef.current, {
+      opacity: 0,
+      x: 50,
+      duration: 0.8,
+    })
+  });
+
   return (
-    <section className="py-20 px-4 md:px-10 lg:px-28">
+    <section ref={sectionRef} className="py-10 md:py-16 px-4 md:px-10 lg:px-28">
       <div className="max-w-7xl mx-auto px-4">
         {/* Header */}
-        <div className="text-center max-w-2xl mx-auto">
-          <h2 className="text-4xl font-semibold">Latest from Our Blog</h2>
+        <div ref={headingRef} className="text-center max-w-2xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-semibold">Latest from Our Blog</h2>
           <p className="mt-3 max-w-lg mx-auto text-gray-500 text-sm">
             Stay informed with our expert insights and tips domok stands as a
             beacon the dynamic world of property transactions.
@@ -15,15 +52,15 @@ const BlogSection = () => {
         </div>
 
         {/* Content */}
-        <div className="mt-16 flex justify-between gap-16">
+        <div className="mt-16 flex flex-col-reverse lg:flex-row justify-between gap-16">
           {/* LEFT BLOG LIST */}
-          <div className="space-y-10">
+          <div ref={sectionLeftRef} className="space-y-10">
             {blogs.map((blog) => (
-              <div key={blog.id} className="flex items-center gap-4">
+              <div  key={blog.id} className="flex flex-col md:flex-row md:items-center gap-4">
                 <img
                   src={blog.image}
                   alt={blog.title}
-                  className="w-32 rounded-lg object-cover"
+                  className="w-full md:w-36 rounded-lg object-cover"
                 />
 
                 <div>
@@ -49,11 +86,11 @@ const BlogSection = () => {
           </div>
 
           {/* RIGHT FEATURED BLOG */}
-          <div className="">
+          <div ref={sectionRightRef}>
             <img
               src="/images/blog-img4.png"
               alt="blog image"
-              className="rounded-xl w-[90%] object-cover"
+              className="rounded-xl w-full md:w-[70%] lg:w-[90%] object-cover"
             />
 
             <div className="mt-4 flex items-center gap-2 text-xs text-gray-500">
@@ -77,7 +114,7 @@ const BlogSection = () => {
 
         {/* CTA */}
         <div className="mt-14 text-center">
-          <button className="px-8 py-3 border border-blue-600 text-blue-600 rounded-full hover:bg-blue-600 hover:text-white transition">
+          <button className="px-8 py-3 border border-[#005FA6] text-[#005FA6] rounded-full hover:bg-[#005FA6] hover:text-white transition duration-300">
             Contact Us
           </button>
         </div>

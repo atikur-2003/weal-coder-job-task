@@ -1,5 +1,4 @@
-// import { useGSAP } from "@gsap/react";
-// import gsap from "gsap";
+import gsap from "gsap";
 import React, { useState } from "react";
 import { useRef } from "react";
 import phone from "../../dist/images/phone.png";
@@ -7,11 +6,11 @@ import { IoIosArrowDown, IoIosSearch } from "react-icons/io";
 import { LuShoppingCart } from "react-icons/lu";
 import { FaXmark } from "react-icons/fa6";
 import { IoMenuSharp } from "react-icons/io5";
+import { useGSAP } from "@gsap/react";
 
 const Header = () => {
-  const containerRef = useRef();
-  const textRef = useRef();
-  const cardsRef = useRef();
+  const textRef = useRef([]);
+  const searchRef = useRef(null);
   const [menubar, setMenubar] = useState(false);
 
   // navbar Links
@@ -56,37 +55,23 @@ const Header = () => {
     </>
   );
 
-  //   useGSAP(
-  //     () => {
-  //       // Fade in and slide up main text
-  //       gsap.fromTo(
-  //         textRef.current,
-  //         { opacity: 0, y: 50 },
-  //         { opacity: 1, y: 0, duration: 1, ease: "power3.out" }
-  //       );
+  useGSAP(() => {
+    const tl = gsap.timeline();
 
-  //       // Stagger cards from bottom
-  //       gsap.fromTo(
-  //         cardsRef.current.children,
-  //         { opacity: 0, y: 30 },
-  //         {
-  //           opacity: 1,
-  //           y: 0,
-  //           duration: 0.8,
-  //           stagger: 0.2,
-  //           delay: 0.5,
-  //           ease: "power2.out",
-  //         }
-  //       );
-  //     },
-  //     { scope: containerRef }
-  //   );
+    tl.from(textRef.current, {
+      opacity: 0,
+      y: 60,
+      duration: 0.8,
+      stagger: 0.15,
+    }).from(searchRef.current, {
+      opacity: 0,
+      scale: 0.8,
+      duration: 0.8,
+    });
+  }, []);
 
   return (
-    <section
-      ref={containerRef}
-      className="relative min-h-162.5 overflow-hidden"
-    >
+    <section className="relative min-h-162.5 overflow-hidden">
       {/* Background Image right */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -107,20 +92,24 @@ const Header = () => {
             <div className="flex gap-12">
               <div className="flex gap-3 items-center">
                 {/* menubar for mobile screen */}
-                <div className="text-gray-300 lg:hidden">
+                <div className="text-white lg:hidden">
                   {menubar ? (
-                    <FaXmark onClick={() => setMenubar(!menubar)} size={30} />
+                    <FaXmark onClick={() => setMenubar(!menubar)} size={25} />
                   ) : (
                     <IoMenuSharp
                       onClick={() => setMenubar(!menubar)}
-                      size={30}
+                      size={25}
                     />
                   )}
                 </div>
 
                 {/* logo */}
                 <div className="flex items-center gap-3">
-                  <img src="/images/logo.png" alt="logo" className="w-40" />
+                  <img
+                    src="/images/logo.png"
+                    alt="logo"
+                    className="w-36 md:w-42"
+                  />
                 </div>
               </div>
 
@@ -130,6 +119,7 @@ const Header = () => {
               </ul>
             </div>
 
+            {/* nav right cart and contact */}
             <div className="flex items-center gap-3 md:gap-6">
               <div className="relative">
                 <LuShoppingCart size={25} className="" />
@@ -137,7 +127,7 @@ const Header = () => {
                   0
                 </span>
               </div>
-              <div className="flex items-center gap-2 bg-white rounded-full px-4 py-2">
+              <div className="flex items-center gap-2 bg-white rounded-full px-2 md:px-4 py-1 md:py-2">
                 <img src={phone} alt="phone logo" />
                 <span className="hidden sm:inline text-black">
                   +0231 23 21 23
@@ -145,6 +135,7 @@ const Header = () => {
               </div>
             </div>
           </div>
+
           {/* mobile navbar */}
           {menubar && (
             <div className="lg:hidden mt-2 bg-gray-900/95 backdrop-blur-md border-t rounded-lg border-gray-700/50">
@@ -156,18 +147,23 @@ const Header = () => {
         </nav>
 
         {/* Hero Content */}
-        <div className="container mx-auto mt-16 md:mt-28" ref={textRef}>
-          <h1 className="text-4xl md:text-6xl font-bold text-white leading-tight">
-            Find Your Most <br /> Suitable Property
-          </h1>
-          <p className="text-white/90 mt-4 text-lg">
-            The world of real estate, where you can embark on a journey to{" "}
-            <br />
-            discover your perfect lifestyle home.
-          </p>
+        <div className="container mx-auto mt-16 md:mt-28">
+          <div ref={textRef}>
+            <h1 className="text-3xl md:text-5xl font-bold text-white leading-tight">
+              Find Your Most <br /> Suitable Property
+            </h1>
+            <p className="text-white/90 mt-4 text-lg">
+              The world of real estate, where you can embark on a journey to{" "}
+              <br />
+              discover your perfect lifestyle home.
+            </p>
+          </div>
 
           {/* Search Bar */}
-          <div className="mt-10 flex flex-col sm:flex-row gap-4">
+          <div
+            ref={searchRef}
+            className="mt-10 flex flex-col sm:flex-row gap-4"
+          >
             <div className="relative">
               <input
                 type="text"

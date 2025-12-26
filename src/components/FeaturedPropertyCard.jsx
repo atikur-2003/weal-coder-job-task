@@ -1,11 +1,37 @@
-import React from "react";
+import React, { useRef } from "react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import locationIcon from "../../dist/images/location.png";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 
 const FeaturedPropertyCard = ({ property }) => {
+gsap.registerPlugin(ScrollTrigger);
+
   const { image, category, title, location, description, price } = property;
 
+  const sectionRef = useRef();
+
+  useGSAP(() => {
+
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: sectionRef.current,
+        start: "top 90%",
+      },
+    });
+
+    tl.from(sectionRef.current, {
+      opacity: 0,
+      scale: 0.80,
+      duration: 0.8,
+    });
+  });
+
   return (
-    <div className="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden">
+    <div
+      ref={sectionRef}
+      className="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden"
+    >
       {/* Image */}
       <div className="h-56 overflow-hidden">
         <img
