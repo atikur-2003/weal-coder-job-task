@@ -50,7 +50,7 @@ const Testimonials = () => {
           <h2 className="text-3xl md:text-4xl font-semibold text-gray-900">
             What People Saying Us?
           </h2>
-          <p className="text-gray-600 mt-3">
+          <p className="text-gray-600 mt-3 max-w-xl mx-auto">
             Whether you’re buying, selling, or investing, let us be your trusted
             partner. Contact us now to get started!
           </p>
