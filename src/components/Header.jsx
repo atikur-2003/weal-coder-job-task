@@ -2,7 +2,6 @@
 // import gsap from "gsap";
 import React, { useState } from "react";
 import { useRef } from "react";
-import logo from "../../dist/images/navLogo.png";
 import phone from "../../dist/images/phone.png";
 import { IoIosArrowDown, IoIosSearch } from "react-icons/io";
 import { LuShoppingCart } from "react-icons/lu";
@@ -121,7 +120,7 @@ const Header = () => {
 
                 {/* logo */}
                 <div className="flex items-center gap-3">
-                  <img src={logo} alt="logo" className="w-40" />
+                  <img src="/images/logo.png" alt="logo" className="w-40" />
                 </div>
               </div>
 

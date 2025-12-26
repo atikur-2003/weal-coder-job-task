@@ -8,6 +8,7 @@ import AllProperties from './components/AllProperties';
 import Testimonials from './components/Testimonial';
 import ContactSection from './components/ContactSection';
 import BlogSection from './components/BlogSection';
+import Footer from './components/Footer';
 
 const App = () => {
     return (
@@ -21,6 +22,7 @@ const App = () => {
             <Testimonials/>
             <ContactSection/>
             <BlogSection/>
+            <Footer/>
         </div>
     );
 };
