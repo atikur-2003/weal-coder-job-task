@@ -1,7 +1,6 @@
 import gsap from "gsap";
 import React, { useState } from "react";
 import { useRef } from "react";
-import phone from "../../dist/images/phone.png";
 import { IoIosArrowDown, IoIosSearch } from "react-icons/io";
 import { LuShoppingCart } from "react-icons/lu";
 import { FaXmark } from "react-icons/fa6";
@@ -128,7 +127,7 @@ const Header = () => {
                 </span>
               </div>
               <div className="flex items-center gap-2 bg-white rounded-full px-2 md:px-4 py-1 md:py-2">
-                <img src={phone} alt="phone logo" />
+                <img src="/images/phone.png" alt="phone logo" />
                 <span className="hidden sm:inline text-black">
                   +0231 23 21 23
                 </span>

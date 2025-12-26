@@ -1,6 +1,5 @@
 import React, { useRef } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import locationIcon from "../../dist/images/location.png";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 
@@ -48,7 +47,7 @@ gsap.registerPlugin(ScrollTrigger);
             {category}
           </span>
           <div className="flex items-center gap-2 text-sm text-[#4F575C] mt-3">
-            <img src={locationIcon} alt="Location Icon" className="w-5" />
+            <img src="/images/location.png" alt="Location Icon" className="w-5" />
             {location}
           </div>
           <h3 className="text-2xl mt-2 font-semibold text-[#000F1A]">

@@ -1,9 +1,6 @@
 import gsap from "gsap";
 import React, { useRef } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import headerBottom1 from "../../dist/images/header-bottom1.png";
-import headerBottom2 from "../../dist/images/header-bottom2.png";
-import headerBottom3 from "../../dist/images/header-bottom3.png";
 import { useGSAP } from "@gsap/react";
 
 const HeaderBottomCards = () => {
@@ -32,7 +29,7 @@ const HeaderBottomCards = () => {
     >
       <div className="bg-white shadow-md py-5 rounded-xl flex flex-col items-center">
         <div>
-          <img src={headerBottom1} alt="" />
+          <img src="/images/header-bottom1.png" alt="" />
         </div>
         <div className="text-center mt-3">
           <h3 className="text-2xl text-[#282E33] font-semibold mb-2">
@@ -43,7 +40,7 @@ const HeaderBottomCards = () => {
       </div>
       <div className="bg-white shadow-md py-5  rounded-xl flex flex-col items-center">
         <div>
-          <img src={headerBottom2} alt="" />
+          <img src="/images/header-bottom2.png" alt="" />
         </div>
         <div className="text-center">
           <h3 className="text-2xl text-[#282E33] font-semibold mb-2">
@@ -54,7 +51,7 @@ const HeaderBottomCards = () => {
       </div>
       <div className="bg-white shadow-md py-5  rounded-xl flex flex-col items-center">
         <div>
-          <img src={headerBottom3} alt="" />
+          <img src="/images/header-bottom3.png" alt="" />
         </div>
         <div className="text-center">
           <h3 className="text-2xl text-[#282E33] font-semibold mb-2">

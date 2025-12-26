@@ -1,15 +1,19 @@
 const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   entry: "./src/main.jsx",
+
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "bundle.js",
     clean: true,
   },
+
   resolve: {
     extensions: [".js", ".jsx"],
   },
+
   module: {
     rules: [
       {
@@ -18,7 +22,7 @@ module.exports = {
         use: "babel-loader",
       },
       {
-        test: /\.css$/i,
+        test: /\.css$/,
         use: ["style-loader", "css-loader", "postcss-loader"],
       },
       {
@@ -27,10 +31,19 @@ module.exports = {
       },
     ],
   },
+
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: "./public/index.html",
+    }),
+  ],
+
   devServer: {
-    static: "./dist",
+    static: path.resolve(__dirname, "public"),
+    historyApiFallback: true,
     port: 3000,
     open: true,
   },
+
   mode: "development",
 };

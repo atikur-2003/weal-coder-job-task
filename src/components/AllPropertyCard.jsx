@@ -1,6 +1,5 @@
 import React, { useRef } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import locationIcon from "../../dist/images/location.png";
 import { FaBed, FaBath, FaRulerCombined } from "react-icons/fa";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
@@ -54,7 +53,7 @@ const AllPropertyCard = ({ property }) => {
         <h3 className="text-xl font-semibold text-gray-900">{title}</h3>
 
         <div className="flex items-center gap-2 text-sm text-[#4F575C] mt-3">
-          <img src={locationIcon} alt="Location Icon" className="w-5" />
+          <img src="/images/location.png" alt="Location Icon" className="w-5" />
           {location}
         </div>
 
