@@ -2,15 +2,12 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import React, { useRef } from "react";
-import { FaPhoneAlt } from "react-icons/fa";
 
 const ContactSection = () => {
   gsap.registerPlugin(ScrollTrigger);
 
   const sectionRef = useRef();
   const headingRef = useRef();
-  const sectionLeftRef = useRef();
-  const sectionRightRef = useRef();
 
   useGSAP(() => {
     const tl = gsap.timeline({

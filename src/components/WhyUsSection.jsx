@@ -44,7 +44,7 @@ const WhyUsSection = () => {
   });
 
   return (
-    <div ref={sectionRef} className="px-4 md:px-10 lg:px-28 my-16">
+    <div ref={sectionRef} className="px-4 md:px-10 lg:px-28 my-16 overflow-hidden">
       {/* section top title */}
       <div ref={headingRef} className="text-center">
         <h1 className="text-3xl md:text-4xl text-[#000F1A] font-medium">

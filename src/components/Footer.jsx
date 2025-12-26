@@ -85,14 +85,14 @@ const Footer = () => {
             </div>
 
             <div className="border-b border-white/10">
-              <input type="text" placeholder="Your Subject" className="p-3" />
+              <input type="text" placeholder="Your Subject" className="p-3 w-full" />
             </div>
 
             <div className="border-b border-white/10">
               <textarea
                 rows="3"
                 placeholder="Message"
-                className="p-3 resize-none"
+                className="p-3 resize-none w-full"
               />
             </div>
 

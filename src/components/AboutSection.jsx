@@ -67,7 +67,7 @@ const AboutSection = () => {
   return (
     <section
       ref={sectionRef}
-      className="w-full bg-white mt-0 lg:mt-24 pt-16 lg:pt-24 px-4 md:px-10 lg:px-24"
+      className="w-full bg-white mt-0 lg:mt-24 pt-16 lg:pt-24 px-4 md:px-10 lg:px-24 overflow-hidden"
     >
       <div className="flex flex-col lg:flex-row justify-between gap-12">
         {/* LEFT SIDE */}

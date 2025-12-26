@@ -38,7 +38,7 @@ const BlogSection = () => {
   });
 
   return (
-    <section ref={sectionRef} className="py-10 md:py-16 px-4 md:px-10 lg:px-28">
+    <section ref={sectionRef} className="py-10 md:py-16 px-4 md:px-10 lg:px-28 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4">
         {/* Header */}
         <div ref={headingRef} className="text-center max-w-2xl mx-auto">

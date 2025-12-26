@@ -33,7 +33,7 @@ const FeaturedProperties = () => {
   });
 
   return (
-    <section ref={sectionRef} className="pt-16 lg:pt-24 px-4 md:px-7 lg:px-14">
+    <section ref={sectionRef} className="pt-16 lg:pt-24 px-4 md:px-7 lg:px-14 overflow-hidden">
       <div className="bg-[#E6EFF6] rounded-xl md:px-5 lg:px-10 py-16">
         <div className="container mx-auto px-4">
           {/* Section Header */}

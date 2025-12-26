@@ -33,7 +33,7 @@ const AllProperties = () => {
   });
 
   return (
-    <div ref={sectionRef} className="px-4 md:px-10 lg:px-28 my-20">
+    <div ref={sectionRef} className="px-4 md:px-10 lg:px-28 my-20 overflow-hidden">
       {/* section top */}
       <div className="flex flex-col lg:flex-row justify-between gap-14">
         <div ref={headingRef}>
