@@ -1,6 +1,5 @@
 import React, { useRef } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-
 import FeaturedPropertyCard from "./FeaturedPropertyCard";
 import properties from "../data/featuredProperties.json";
 import { useGSAP } from "@gsap/react";

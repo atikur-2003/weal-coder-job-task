@@ -6,13 +6,12 @@ import gsap from "gsap";
 
 const AllPropertyCard = ({ property }) => {
   gsap.registerPlugin(ScrollTrigger);
-  
+
   const { image, category, title, location, price } = property;
 
   const sectionRef = useRef();
 
   useGSAP(() => {
-
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: sectionRef.current,
@@ -22,13 +21,16 @@ const AllPropertyCard = ({ property }) => {
 
     tl.from(sectionRef.current, {
       opacity: 0,
-      scale: 0.80,
+      scale: 0.8,
       duration: 0.8,
     });
   });
 
   return (
-    <div ref={sectionRef} className="relative bg-white border border-[#D0DBE3] rounded-xl p-6 flex flex-col md:flex-row gap-6 overflow-visible">
+    <div
+      ref={sectionRef}
+      className="relative bg-white border border-[#D0DBE3] rounded-xl p-6 flex flex-col md:flex-row gap-6 overflow-visible"
+    >
       {/* Image */}
       <div className="md:absolute left-6 -bottom-6 w-44">
         <div className="relative">

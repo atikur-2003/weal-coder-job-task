@@ -67,7 +67,7 @@ const Header = () => {
       scale: 0.8,
       duration: 0.8,
     });
-  }, []);
+  });
 
   return (
     <section className="relative min-h-162.5 overflow-hidden">

@@ -1,18 +1,16 @@
 import React, { useRef } from "react";
-import  blogs from "../data/blogData.json";
+import blogs from "../data/blogData.json";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 
 const BlogSection = () => {
-
   gsap.registerPlugin(ScrollTrigger);
 
   const sectionRef = useRef();
   const headingRef = useRef();
   const sectionLeftRef = useRef();
   const sectionRightRef = useRef();
-  
 
   useGSAP(() => {
     const tl = gsap.timeline({
@@ -27,16 +25,16 @@ const BlogSection = () => {
       y: 50,
       duration: 0.8,
     })
-    .from(sectionLeftRef.current, {
-      opacity: 0,
-      x: -50,
-      duration: 0.8,
-    })
-    .from(sectionRightRef.current, {
-      opacity: 0,
-      x: 50,
-      duration: 0.8,
-    })
+      .from(sectionLeftRef.current, {
+        opacity: 0,
+        x: -50,
+        duration: 0.8,
+      })
+      .from(sectionRightRef.current, {
+        opacity: 0,
+        x: 50,
+        duration: 0.8,
+      });
   });
 
   return (
@@ -44,7 +42,9 @@ const BlogSection = () => {
       <div className="max-w-7xl mx-auto px-4">
         {/* Header */}
         <div ref={headingRef} className="text-center max-w-2xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-semibold">Latest from Our Blog</h2>
+          <h2 className="text-3xl md:text-4xl font-semibold">
+            Latest from Our Blog
+          </h2>
           <p className="mt-3 max-w-lg mx-auto text-gray-500 text-sm">
             Stay informed with our expert insights and tips domok stands as a
             beacon the dynamic world of property transactions.
@@ -56,7 +56,10 @@ const BlogSection = () => {
           {/* LEFT BLOG LIST */}
           <div ref={sectionLeftRef} className="space-y-10">
             {blogs.map((blog) => (
-              <div  key={blog.id} className="flex flex-col md:flex-row md:items-center gap-4">
+              <div
+                key={blog.id}
+                className="flex flex-col md:flex-row md:items-center gap-4"
+              >
                 <img
                   src={blog.image}
                   alt={blog.title}

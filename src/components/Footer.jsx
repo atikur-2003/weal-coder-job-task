@@ -1,5 +1,4 @@
 import React from "react";
-import { FaFacebook, FaFacebookF, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa6";
 
 const Footer = () => {
   return (
@@ -24,10 +23,10 @@ const Footer = () => {
 
               {/* Social Icons */}
               <div className="flex gap-3 mt-5 ">
-                <img src="/images/facebook.png" alt="" />
-                <img src="/images/twitter.png" alt="" />
-                <img src="/images/linkedIn.png" alt="" />
-                <img src="/images/instagram.png" alt="" />
+                <img src="/images/facebook.png" alt="Facebook image" />
+                <img src="/images/twitter.png" alt="Twitter Image" />
+                <img src="/images/linkedIn.png" alt="LinkedIn Image" />
+                <img src="/images/instagram.png" alt="Instagram Image" />
               </div>
             </div>
 

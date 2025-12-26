@@ -7,14 +7,12 @@ import { HiArrowLeft, HiArrowRight } from "react-icons/hi";
 import { PiQuotesThin } from "react-icons/pi";
 
 const Testimonials = () => {
-
-   gsap.registerPlugin(ScrollTrigger);
+  gsap.registerPlugin(ScrollTrigger);
 
   const sectionRef = useRef();
   const headingRef = useRef();
   const sectionImgRef = useRef();
   const sectionContentRef = useRef();
-  
 
   useGSAP(() => {
     const tl = gsap.timeline({
@@ -29,20 +27,23 @@ const Testimonials = () => {
       y: 50,
       duration: 0.8,
     })
-    .from(sectionImgRef.current, {
-      opacity: 0,
-      scale: 0.80,
-      duration: 0.8,
-    })
-    .from(sectionContentRef.current, {
-      opacity: 0,
-      x: 50,
-      duration: 0.8,
-    })
+      .from(sectionImgRef.current, {
+        opacity: 0,
+        scale: 0.8,
+        duration: 0.8,
+      })
+      .from(sectionContentRef.current, {
+        opacity: 0,
+        x: 50,
+        duration: 0.8,
+      });
   });
 
   return (
-    <section ref={sectionRef} className="bg-[#E6EFF6] py-20 overflow-hidden px-4 md:px-10 lg:px-28">
+    <section
+      ref={sectionRef}
+      className="bg-[#E6EFF6] py-20 overflow-hidden px-4 md:px-10 lg:px-28"
+    >
       <div className="container mx-auto px-4">
         {/* Header */}
         <div ref={headingRef} className="text-center max-w-2xl mx-auto mb-16">

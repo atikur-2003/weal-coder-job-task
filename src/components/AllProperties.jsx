@@ -7,13 +7,11 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 
 const AllProperties = () => {
-
-    gsap.registerPlugin(ScrollTrigger);
+  gsap.registerPlugin(ScrollTrigger);
 
   const sectionRef = useRef();
   const headingRef = useRef();
   const headingRightTextRef = useRef();
-  
 
   useGSAP(() => {
     const tl = gsap.timeline({
@@ -31,7 +29,7 @@ const AllProperties = () => {
       opacity: 0,
       x: 50,
       duration: 0.8,
-    })
+    });
   });
 
   return (
@@ -39,13 +37,25 @@ const AllProperties = () => {
       {/* section top */}
       <div className="flex flex-col lg:flex-row justify-between gap-14">
         <div ref={headingRef}>
-          <h1 className="text-2xl md:text-4xl font-medium">Explore Our All Properties</h1>
+          <h1 className="text-2xl md:text-4xl font-medium">
+            Explore Our All Properties
+          </h1>
           <div className="mt-5 space-x-1 md:space-x-3">
-            <span className="bg-[#005FA6] text-white px-2 py-1 rounded-md text-xs">All Properties</span>
-            <span className="text-[#223B4D] bg-[#E6EFF6] px-2 py-1 rounded-md text-xs">Sale</span>
-            <span className="text-[#223B4D] bg-[#E6EFF6] px-2 py-1 rounded-md text-xs">Buy</span>
-            <span className="text-[#223B4D] bg-[#E6EFF6] px-2 py-1 rounded-md text-xs">Rent</span>
-            <span className="text-[#223B4D] bg-[#E6EFF6] px-2 py-1 rounded-md text-xs">Co-Living</span>
+            <span className="bg-[#005FA6] text-white px-2 py-1 rounded-md text-xs">
+              All Properties
+            </span>
+            <span className="text-[#223B4D] bg-[#E6EFF6] px-2 py-1 rounded-md text-xs">
+              Sale
+            </span>
+            <span className="text-[#223B4D] bg-[#E6EFF6] px-2 py-1 rounded-md text-xs">
+              Buy
+            </span>
+            <span className="text-[#223B4D] bg-[#E6EFF6] px-2 py-1 rounded-md text-xs">
+              Rent
+            </span>
+            <span className="text-[#223B4D] bg-[#E6EFF6] px-2 py-1 rounded-md text-xs">
+              Co-Living
+            </span>
           </div>
         </div>
 
