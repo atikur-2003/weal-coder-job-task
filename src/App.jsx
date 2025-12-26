@@ -6,6 +6,7 @@ import FeaturedProperties from './components/FeaturedProperties';
 import WhyUsSection from './components/WhyUsSection';
 import AllProperties from './components/AllProperties';
 import Testimonials from './components/Testimonial';
+import ContactSection from './components/ContactSection';
 
 const App = () => {
     return (
@@ -17,6 +18,7 @@ const App = () => {
             <WhyUsSection/>
             <AllProperties/>
             <Testimonials/>
+            <ContactSection/>
         </div>
     );
 };
