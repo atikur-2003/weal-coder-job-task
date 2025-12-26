@@ -7,6 +7,7 @@ import WhyUsSection from './components/WhyUsSection';
 import AllProperties from './components/AllProperties';
 import Testimonials from './components/Testimonial';
 import ContactSection from './components/ContactSection';
+import BlogSection from './components/BlogSection';
 
 const App = () => {
     return (
@@ -19,6 +20,7 @@ const App = () => {
             <AllProperties/>
             <Testimonials/>
             <ContactSection/>
+            <BlogSection/>
         </div>
     );
 };

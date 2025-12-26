@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "image": "/images/blog-img1.png",
+    "title": "Tip’s about Real Estate Recent Conditio from Agent.",
+    "category": "Apartment",
+    "author": "Emily",
+    "author_img":"/images/blog-profile-icon.png",
+    "date": "Feb 02, 2024"
+  },
+  {
+    "id": 2,
+    "image": "/images/blog-img2.png",
+    "title": "Tip’s about Real Estate Recent Conditio from Agent.",
+    "category": "Apartment",
+    "author": "Emily",
+    "author_img":"/images/blog-profile-icon.png",
+    "date": "Feb 02, 2024"
+  },
+  {
+    "id": 3,
+    "image": "/images/blog-img3.png",
+    "title": "Tip’s about Real Estate Recent Conditio from Agent.",
+    "category": "Apartment",
+    "author": "Emily",
+    "author_img":"/images/blog-profile-icon.png",
+    "date": "Feb 02, 2024"
+  }
+]
