@@ -163,18 +163,18 @@ const Header = () => {
             ref={searchRef}
             className="mt-10 flex flex-col sm:flex-row gap-4"
           >
-            <div className="relative">
+            <div className="relative max-w-80 md:w-110">
               <input
                 type="text"
                 placeholder="Search Properties"
-                className="px-8 py-4 rounded-full w-72 md:w-110 ml-2 text-[#787D80] bg-white outline-none"
+                className="px-8 py-4 rounded-full ml-2 text-[#787D80] bg-white outline-none w-full"
               />
               <IoIosSearch
                 size={20}
                 className="absolute left-4 top-5 text-[#787D80]"
               />
 
-              <button className="absolute right-1 md:right-2 top-2 bg-[#D95D00] hover:bg-orange-600 text-white px-4 md:px-6 py-2 rounded-full font-medium transition">
+              <button className="absolute right-1 top-2 bg-[#D95D00] hover:bg-orange-600 text-white px-4 md:px-6 py-2 rounded-full font-medium transition">
                 Search
               </button>
             </div>

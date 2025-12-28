@@ -60,12 +60,12 @@ const Testimonials = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* LEFT IMAGES */}
 
-          <div ref={sectionImgRef} className="relative md:mt-10 max-w-md">
+          <div ref={sectionImgRef} className="relative md:mt-10 w-60 md:w-96">
             <div className="flex gap-7">
               <img
                 src="/images/testimonial-img1.png"
                 alt="Building"
-                className="rounded-xl object-cover w-50 md:w-80"
+                className="rounded-xl object-cover w-[90%]"
               />
               <img
                 src="/images/message-icon.png"
@@ -77,7 +77,7 @@ const Testimonials = () => {
             <img
               src="/images/testimonial-img2.png"
               alt="House"
-              className="absolute bottom-0 right-7 w-28 md:w-48 rounded-xl shadow-lg border-4 border-white"
+              className="absolute bottom-0 right-0 md:-right-5 w-32 md:w-48 rounded-xl shadow-lg border-4 border-white"
             />
           </div>
 

@@ -80,18 +80,18 @@ const AboutSection = () => {
           </h2>
 
           {/* Images */}
-          <div ref={imgRef} className="relative mt-10 max-w-md">
+          <div ref={imgRef} className="relative mt-10 w-70 md:w-100">
             <img
               
               src="/images/about-img1.png"
               alt="Building"
-              className="rounded-xl object-cover w-50 md:w-100"
+              className="rounded-xl object-cover w-[90%]"
             />
 
             <img
               src="/images/about-img2.png"
               alt="House"
-              className="absolute bottom-0 right-6 md:-right-16 w-28 md:w-52 rounded-xl shadow-lg border-4 border-white"
+              className="absolute bottom-0 right-0 w-36 md:w-52 rounded-xl shadow-lg border-4 border-white"
             />
           </div>
         </div>
